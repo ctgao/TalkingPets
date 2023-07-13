@@ -4,6 +4,36 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class AxolotlTest {
+    // Constructor Tests
+    @Test
+    public void nullaryConstructorTest() {
+        // Given: expected default name
+        String expectedName = "Issac";
+
+        // When: axolotl is created with nullary constructor
+        Axolotl a = new Axolotl();
+
+        // When: get cat's name
+        String actualName = a.getName();
+
+        // Then
+        Assert.assertEquals(expectedName, actualName);
+    }
+    @Test
+    public void constructorWithNameTest() {
+        // Given: expected default name
+        String expectedName = "Aminal";
+
+        // When: axolotl is created with name constructor
+        Axolotl a = new Axolotl(expectedName);
+
+        // When: get axolotl's name
+        String actualName = a.getName();
+
+        // Then
+        Assert.assertEquals(expectedName, actualName);
+    }
+
     @Test
     public void getNameTest() {
         // Given: an axolotl and expected name
